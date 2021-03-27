@@ -27,20 +27,19 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-    
+
 
     <div class="site-wrap">
-      
+
       <nav class="site-menu">
         <div class="site-menu-inner">
           <ul class="list-unstyled">
             <li class="active"><a href="/">Home</a></li>
-            <!--  -->
             <li><a href="{% url 'meals:meal_list' %}">Meals</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Blog</a></li>
-            <li><a href="">Reserve A Table</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="{% url 'aboutus:aboutus_list' %}">About Us</a></li>
+            <li><a href="{% url 'blog:post_list' %}">Our Blog</a></li>
+            <li><a href="{% url 'reservation:reserve_table' %}">Reserve A Table</a></li>
+            <li><a href="{% url 'contact:send_email' %}">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -55,16 +54,15 @@
             </ul>
           </div>
           <div class="col-2 col-md-6 text-center">
-            <a href="index.html" class="site-logo">D</a>
+            <a href="/" class="site-logo">D</a>
           </div>
           <div class="col-5 col-md-3 text-right menu-burger-wrap">
             <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>
-
           </div>
         </div>
-       
+
       </header> <!-- site-header -->
-  
+
 
       {% block body %}
 
