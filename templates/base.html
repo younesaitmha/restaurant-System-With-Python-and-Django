@@ -63,6 +63,22 @@
 
       </header> <!-- site-header -->
 
+      <div class="container">
+        {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+              <li>
+                <div class="alert {% if message.tags %} alert-{{ message.tags }} {% endif %} text-center">
+                  <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                  {{ message }}
+                </div>
+              </li>
+              {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
 
       {% block body %}
 
